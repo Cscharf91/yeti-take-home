@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Poppins';
+}
+
+.logo {
+  width: 60px;
+  height: 48px;
+}
+
+.menu {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--dark);
+  cursor: default;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    justify-content: flex-end;
+  }
+
+  .logo {
+    display: none;
+  }
+}
