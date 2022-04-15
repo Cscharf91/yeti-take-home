@@ -1,12 +1,73 @@
+/* CSS Variables */
+
 :root {
   --dark: #1e252c;
 }
 
+/* Flexbox Utility Classes */
+
 .flex-center {
   display: flex;
   justify-content: center;
+  align-items: flex-start;
+  gap: 1.5em;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: 1em;
+}
+
+.align-center {
+  align-self: center;
+}
+
+.align-start {
+  align-self: flex-start;
+}
+
+/* General Utility Classes */
+
+.width-100 {
+  width: 100%;
+}
+
+.height-100 {
+  height: 100%;
+}
+
+.sm-textbox {
+  padding: 3em;
+  max-width: 150px;
+}
+
+.sect-title {
+  font-size: 100px;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: var(--dark);
+  color: transparent;
+  margin: 0 0 -2.5rem 0;
+  z-index: 10;
+}
+
+section {
+  color: var(--dark);
+}
+
+.min-width-250 {
+  min-width: 250px;
+}
+
+section p {
+  font-size: 20px;
+  font-family: 'Roboto';
+}
+
+section p strong {
+  font-size: 26px;
+  font-family: 'Poppins';
 }
 
 .cursor-pointer {
@@ -14,5 +75,37 @@
 }
 
 .page-wrapper {
-  padding: 15px 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.page-container {
+  width: 90%;
+}
+
+/* Page Responsiveness */
+
+@media screen and (max-width: 1060px) {
+  .sect-title {
+    margin: auto;
+  }
+
+  .img {
+    max-width: 75vw;
+  }
+
+  .about-sect {
+    display: block;
+  }
+
+  .sm-textbox {
+    min-width: 60vw;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .page-container {
+    width: 70%;
+  }
 }
