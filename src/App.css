@@ -1,7 +1,45 @@
-/* CSS Variables */
+/* CSS Variables and basic config */
 
 :root {
   --dark: #1e252c;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Nav Menu */
+.menu {
+  transition: all 0.3s;
+  overflow-y: scroll;
+  list-style: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 0;
+  max-width: 250px;
+  background: var(--dark);
+  overflow: hidden;
+  z-index: 9;
+}
+
+.show-menu {
+  transition: all 0.3s;
+  width: 100%;
+}
+
+li {
+  margin-top: 20px;
+}
+
+a {
+  margin: 40px;
+  text-decoration: none;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 /* Flexbox Utility Classes */
@@ -11,6 +49,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 5px;
+}
+
+.flex-end {
+  width: 95%;
+  margin: 5px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
   gap: 5px;
 }
 

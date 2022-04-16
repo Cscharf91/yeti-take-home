@@ -12,12 +12,19 @@
 }
 
 .menu {
+  position: relative;
   font-size: 12px;
   font-weight: 500;
   letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--dark);
   cursor: default;
+}
+
+.xBtn {
+  color: #fff;
+  text-align: right;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 768px) {

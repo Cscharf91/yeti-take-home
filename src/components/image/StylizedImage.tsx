@@ -4,12 +4,12 @@ type Direction = "nw" | "ne" | "sw" | "se";
 
 type Props = {
   src: string;
-  alt: string;
+  alt?: string;
   shadowDirection: Direction;
   width: string;
 }
 
-const StylizedImage = ({ src, alt, shadowDirection, width }: Props) => {
+const StylizedImage = ({ src, alt = "", shadowDirection, width }: Props) => {
   const getBoxShadow = (dir: Direction) => {
     switch (dir) {
       case "sw":
