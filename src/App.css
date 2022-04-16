@@ -11,6 +11,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 5px;
 }
 
 .flex-reverse {
@@ -114,7 +115,7 @@
 }
 
 section {
-  margin: 150px 0;
+  margin: 80px 0;
   color: var(--dark);
 }
 
