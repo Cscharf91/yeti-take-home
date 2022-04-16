@@ -1,8 +1,20 @@
 import React from "react";
 
-const StylizedImage = ({ src, alt, shadowDirection, width }) => {
-  const getBoxShadow = (dir) => {
+type Direction = "nw" | "ne" | "sw" | "se";
+
+type Props = {
+  src: string;
+  alt: string;
+  shadowDirection: Direction;
+  width: string;
+}
+
+const StylizedImage = ({ src, alt, shadowDirection, width }: Props) => {
+  const getBoxShadow = (dir: Direction) => {
     switch (dir) {
+      case "sw":
+        return "rgb(235 234 235) -25px 30px";
+
       case "se":
         return "rgb(235 234 235) 25px 30px";
 
@@ -11,9 +23,6 @@ const StylizedImage = ({ src, alt, shadowDirection, width }) => {
 
       case "ne":
         return "rgb(235 234 235) 25px -30px";
-
-      case "sw":
-        return "rgb(235 234 235) -25px 30px";
 
       default:
         break;
