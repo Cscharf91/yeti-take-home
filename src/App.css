@@ -7,13 +7,29 @@
 /* Flexbox Utility Classes */
 
 .flex-center {
+  margin: 25px 0;
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+.flex-reverse {
+  margin: 25px 0;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
   align-items: flex-start;
-  gap: 1.5em;
+}
+
+.flex-between {
+  margin: 25px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .flex-column {
+  margin: 25px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -38,9 +54,26 @@
   height: 100%;
 }
 
+.rotated-title {
+  transform: rotate(-90deg);
+  max-width: 115px;
+  margin-top: 10rem;
+}
+
 .sm-textbox {
-  padding: 3em;
+  padding: 10px;
   max-width: 150px;
+}
+
+.md-textbox {
+  padding: 10px;
+  max-width: 450px;
+  font-size: 35px;
+}
+
+.lg-textbox {
+  padding: 10px;
+  max-width: 665px;
 }
 
 .sect-title {
@@ -48,11 +81,40 @@
   -webkit-text-stroke-width: 1.5px;
   -webkit-text-stroke-color: var(--dark);
   color: transparent;
-  margin: 0 0 -2.5rem 0;
   z-index: 10;
+  white-space: nowrap;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-2-col {
+  margin-top: 80px;
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  column-count: 2;
+
+  -webkit-column-gap: 20px;
+  -moz-column-gap: 20px;
+  column-gap: 20px;
+}
+
+.text-2-col p {
+  /* a bit hackey, but disallows the text from first p to go into second column like in mockup */
+  margin: 1px;
+}
+
+.overlap-under {
+  margin: 0 0 -2.5rem 0;
+}
+
+.overlap-over {
+  margin: -70px;
 }
 
 section {
+  margin: 150px 0;
   color: var(--dark);
 }
 
@@ -62,12 +124,19 @@ section {
 
 section p {
   font-size: 20px;
-  font-family: 'Roboto';
+  line-height: 1.6;
+  color: #4a4a4a;
+  font-family: "Roboto Mono";
 }
 
-section p strong {
+.bold-1 {
   font-size: 26px;
-  font-family: 'Poppins';
+  font-family: "Poppins";
+}
+
+.bold-2 {
+  font-size: 35px;
+  font-family: "Poppins";
 }
 
 .cursor-pointer {
@@ -86,26 +155,78 @@ section p strong {
 
 /* Page Responsiveness */
 
-@media screen and (max-width: 1060px) {
+@media screen and (max-width: 1150px) {
   .sect-title {
-    margin: auto;
+    margin: 20px auto 0 auto;
+    font-size: 70px;
+    white-space: normal;
   }
 
+  .bold-1,
+  .bold-2 {
+    font-size: 24px;
+  }
+
+  .vision-text {
+    display: inline;
+  }
+
+  section {
+    margin: 15px;
+  }
+
+  section p {
+    font-size: 16px;
+  }
+
+  .overlap-over {
+    margin: 0;
+  }
+
+  .rotated-title {
+    transform: rotate(0);
+    max-width: none;
+    margin-top: 0;
+  }
+
+  .large-img,
   .img {
-    max-width: 75vw;
+    max-width: 70vw;
+    margin: 50px auto 0 auto;
   }
 
-  .about-sect {
-    display: block;
+  .about-sect,
+  .vision-sect {
+    display: inline;
   }
 
-  .sm-textbox {
-    min-width: 60vw;
+  .sm-textbox,
+  .md-textbox,
+  .lg-textbox {
+    margin: 35px auto;
+    min-width: 70vw;
+  }
+
+  .lg-textbox {
+    margin-top: -20px;
+    width: 70vw;
+  }
+
+  .text-2-col {
+    width: 70vw;
+    margin: 35px auto 0 auto;
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+  }
+
+  .text-2-col p {
+    margin-bottom: 35px;
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1400px) {
   .page-container {
-    width: 70%;
+    width: 1100px;
   }
 }

@@ -8,6 +8,7 @@
 .logo {
   width: 60px;
   height: 48px;
+  align-self: center;
 }
 
 .menu {
