@@ -204,8 +204,8 @@ section p {
   .sm-textbox,
   .md-textbox,
   .lg-textbox {
-    margin: 35px auto;
-    min-width: 70vw;
+    /* margin: 35px auto; */
+    min-width: 100%;
   }
 
   .lg-textbox {

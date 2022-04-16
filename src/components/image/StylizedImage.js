@@ -11,7 +11,7 @@ const StylizedImage = ({ src, alt, shadowDirection, width }) => {
 
       case "ne":
         return "rgb(235 234 235) 25px -30px";
-      
+
       case "sw":
         return "rgb(235 234 235) -25px 30px";
 
@@ -25,7 +25,11 @@ const StylizedImage = ({ src, alt, shadowDirection, width }) => {
       className="img"
       src={src}
       alt={alt}
-      style={{ boxShadow: getBoxShadow(shadowDirection), width: width, zIndex: "-1" }}
+      style={{
+        boxShadow: getBoxShadow(shadowDirection),
+        width: width,
+        zIndex: "-1",
+      }}
     />
   );
 };
