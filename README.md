@@ -31,9 +31,9 @@ npm test
 * Try clicking on the menu on the top! I added a small slide-out menu using the `useState` hook and CSS transitions. It's also responsive for mobile.
 
 * I added TypeScript to this project because:
-    1. I love TypeScript
-    2. It was mentioned in the tech stack on the job posting.
+    1. It was mentioned in the tech stack on the job posting.
+    2. I love TypeScript
 
-  I'm aware that TypeScript is extremely unnecessary for a project of this size with little interactivity and without data-driven logic, but I included it mainly for reason #2 above for demonstration purposes.
+  I'm aware that TypeScript is extremely unnecessary for a project of this size with little interactivity and without data-driven logic, but I included it mainly for reason #1 above for demonstration purposes.
 
 ## Thanks for the opportunity! Looking forward to hearing back!
