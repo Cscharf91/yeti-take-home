@@ -204,6 +204,10 @@ section p {
 /* Page Responsiveness */
 
 @media screen and (max-width: 1150px) {
+  .menu {
+    max-width: 100%;
+  }
+  
   .sect-title {
     margin: 20px auto 0 auto;
     font-size: 70px;
