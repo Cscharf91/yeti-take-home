@@ -9,7 +9,7 @@ const links = [
 ];
 
 const Menu = () => {
-  const [navOpen, setNavOpen] = useState(false);
+  const [navOpen, setNavOpen] = useState<boolean>(false);
   const handleToggle = () => setNavOpen((prev) => !prev);
   return (
     <>
